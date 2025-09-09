@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Stream Player – Willow / SKY</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Live Stream Player</h1>
+    <p class="subtitle">Play .m3u8 or .ts streams through a CORS-safe proxy</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="preset-buttons">
+        <button id="btn-willow" class="btn primary">Willow</button>
+        <button id="btn-sky" class="btn">SKY</button>
+      </div>
+      <div class="url-input">
+        <input id="stream-url" type="url" placeholder="Paste a .m3u8 or .ts URL" spellcheck="false"/>
+        <button id="btn-play" class="btn accent">Play</button>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="player">
+      <div class="video-wrapper">
+        <video id="video" class="video" controls playsinline preload="metadata"></video>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Streams are proxied to bypass CORS and safely fetch segments.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js" crossorigin="anonymous"></script>
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
