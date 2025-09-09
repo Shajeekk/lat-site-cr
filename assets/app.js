@@ -8,8 +8,8 @@ const elements = {
 };
 
 const PRESETS = {
-  willow: '', // put your Willow .m3u8 URL here (or leave blank for manual)
-  sky: '',    // put your SKY .m3u8 URL here
+  willow: 'https://tv.rolextv.one/live/Hamad1/@cric_hammad2/139.ts', // put your Willow .m3u8 URL here (or leave blank for manual)
+  sky: 'http://b1g.ooo/live/Hammad/Pctteam1/697055.ts',    // put your SKY .m3u8 URL here
 };
 
 const PROXY_PREFIX = '/proxy/';
